@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Form from "./components/Forms/Form";
+import Form2 from "./components/Forms/Form2";
+import Form3 from "./components/Forms/Form3";
+import PrintForm from "./components/PrintForm/PrintForm";
 
 function App() {
+  const [userName, setUserName] = useState("");
+  const [age, setAge] = useState("");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Form setUserName={setUserName} userName={userName}/>
+      <Form2 setAge={setAge} />
+      <button
+        onClick={() => {
+          setAge("");
+          setUserName("");
+        }}
+      >
+        Reset Form
+      </button>
+      <PrintForm userName={userName} age={age} /> */}
+      <Form3/>
     </div>
   );
 }
