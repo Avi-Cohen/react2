@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import PrintForm from "../PrintForm/PrintForm";
 
 const Form3 = () => {
   const [inputValue, setInputValue] = useState("");
   const [isClicked, setIsClicked] = useState(false);
+  const inputEl = useRef(null);
   console.log(inputValue);
+  // inputEl.current.style.background = "red";
   return (
     <>
       <form>
         <input
+          ref={inputEl}
           type="text"
           value={inputValue}
           placeholder={"enter value"}
